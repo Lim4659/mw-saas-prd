@@ -1,6 +1,6 @@
 # The template for this file is available on GitHub: https://github.com/Dynatrace/dynatrace-operator/blob/v1.3.2/assets/samples/dynakube/v1beta2/classicFullStack.yaml
 apiVersion: v1
-ddata:
+data:
   apiToken: ZHQwYzAxLlNOTFNMVjRUUFpGRlhCVjY2M0JCSENZMy5MSjJGUVk0RURJUUZISFMyWkxMQ0FWTVVQWFdOMlpGRENBUTc1RUtPS1BaUVdCUFVIRFlGRFNYTkVPWUxVRFhU
   dataIngestToken: ZHQwYzAxLjNDSTVHTlBFTFRLTU9TUlhXSU1aUFVQUS5XVTJVNERVU0VXNUgyMktGTVNLRVBUU0MzUFNQRVA3U0JFTFhJQVNGSlFRSlFLUU9aR0VPWkVNTTVSV0pJM1BG
 kind: Secret
