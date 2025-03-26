@@ -88,6 +88,7 @@ spec:
     # Optional: Sets a host group for OneAgent.
     #
     # hostGroup: ""
+    hostGroup: middleware-saas-prd
 
     # Enables classic fullstack monitoring and changes its settings
     # Cannot be used in conjunction with cloud-native fullstack monitoring, application-only monitoring or host monitoring
