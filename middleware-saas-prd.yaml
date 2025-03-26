@@ -1,6 +1,6 @@
 # The template for this file is available on GitHub: https://github.com/Dynatrace/dynatrace-operator/blob/v1.3.2/assets/samples/dynakube/v1beta2/classicFullStack.yaml
 apiVersion: v1
-data:
+ddata:
   apiToken: ZHQwYzAxLlNOTFNMVjRUUFpGRlhCVjY2M0JCSENZMy5MSjJGUVk0RURJUUZISFMyWkxMQ0FWTVVQWFdOMlpGRENBUTc1RUtPS1BaUVdCUFVIRFlGRFNYTkVPWUxVRFhU
   dataIngestToken: ZHQwYzAxLjNDSTVHTlBFTFRLTU9TUlhXSU1aUFVQUS5XVTJVNERVU0VXNUgyMktGTVNLRVBUU0MzUFNQRVA3U0JFTFhJQVNGSlFRSlFLUU9aR0VPWkVNTTVSV0pJM1BG
 kind: Secret
@@ -183,7 +183,7 @@ spec:
 
   # Configuration for ActiveGate instances.
   #
-  #activeGate:
+  activeGate:
     # Specifies which capabilities will be enabled on ActiveGate instances
     # The following capabilities can be set:
     # - routing
@@ -191,10 +191,10 @@ spec:
     # - metrics-ingest
     # - dynatrace-api
     #
-    #capabilities:
-      #- routing
-      #- kubernetes-monitoring
-      #- dynatrace-api
+    capabilities:
+      - routing
+      - kubernetes-monitoring
+      - dynatrace-api
 
     # Optional: Sets the image used to deploy ActiveGate instances
     # Defaults to the latest ActiveGate image on the tenant's registry
@@ -219,20 +219,20 @@ spec:
     # For more information on node selectors, see https://kubernetes.io/docs/tasks/configure-pod-container/assign-pods-nodes/
     #
     # nodeSelector: {}
-    #nodeSelector:
-      #workload: app
+    nodeSelector:
+      workload: app
 
     # Optional: Specifies resource settings for ActiveGate instances
     # Consumption of the ActiveGate heavily depends on the workload to monitor
     # The values should be adjusted according to the workload
     #
-    #resources:
-      #requests:
-        #cpu: 500m
-        #memory: 512Mi
-      #limits:
-        #cpu: 1000m
-        #memory: 1.5Gi
+    resources:
+      requests:
+        cpu: 500m
+        memory: 512Mi
+      limits:
+        cpu: 1000m
+        memory: 1.5Gi
 
     # Optional: Adds custom labels to ActiveGate pods
     # Can be used to structure workloads
@@ -247,7 +247,7 @@ spec:
     # Recommended: Sets the activation group for ActiveGate instances
     #
     # group: ""
-    #group: middleware-saas-prd
+    group: middleware-saas-prd
 
     # Optional: Defines a custom properties file, the file contents can be provided either as a value in this yaml or as a reference to a secret.
     # If a reference to a secret is used, then the file contents must be stored under the 'customProperties' key within the secret.
